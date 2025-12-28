@@ -1,0 +1,47 @@
+@define-color bg_main rgba(10, 10, 10, 0.88);
+@define-color bg_alt rgba(20, 20, 20, 0.92);
+@define-color fg_main #e0e0e0;
+@define-color accent #5aa9ff;
+
+.control-center {
+  background-color: @bg_main;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.notification {
+  background-color: @bg_alt;
+  color: @fg_main;
+  border-radius: 8px;
+  margin: 6px 0;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.notification-title {
+  font-weight: bold;
+  color: @accent;
+}
+
+.notification-body {
+  color: @fg_main;
+  opacity: 0.85;
+}
+
+.notification-action {
+  background: transparent;
+  color: @accent;
+  border: none;
+  padding: 4px;
+}
+
+.notification-action:hover {
+  background-color: rgba(90, 169, 255, 0.1);
+  border-radius: 4px;
+}
+
+.placeholder {
+  background: transparent;
+}
