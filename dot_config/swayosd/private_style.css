@@ -1,0 +1,45 @@
+/* Match waybar dark theme */
+@define-color background-color rgba(0, 0, 0, 0.65);
+@define-color border-color rgba(255, 255, 255, 0.08);
+@define-color label #ffffff;
+@define-color image #ffffff;
+@define-color progress #ffffff;
+
+window {
+  border-radius: 0;
+  opacity: 0.95;
+  border: none;
+  background-color: @background-color;
+}
+
+#container {
+  margin: 8px 14px;
+}
+
+label {
+  font-family: 'JetBrainsMono Nerd Font', monospace;
+  font-size: 13px;
+  color: @label;
+}
+
+image {
+  color: @image;
+  -gtk-icon-size: 16px;
+}
+
+progressbar {
+  border-radius: 0;
+  min-height: 4px;
+  background: transparent;
+  border: none;
+}
+
+trough {
+  min-height: inherit;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+}
+
+progress {
+  background-color: @progress;
+}
