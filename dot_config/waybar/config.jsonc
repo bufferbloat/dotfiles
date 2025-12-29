@@ -5,7 +5,7 @@
   "spacing": 0,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/tailscale", "pulseaudio", "network", "battery", "custom/notifications", "custom/power"],
+  "modules-right": ["custom/tailscale", "custom/separator", "pulseaudio", "network", "battery", "custom/notifications", "custom/separator", "custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -97,6 +97,11 @@
   "custom/power": {
     "format": "⏻",
     "on-click": "~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false
+  },
+
+  "custom/separator": {
+    "format": " 〡",
     "tooltip": false
   }
 }

@@ -66,6 +66,10 @@ tooltip label {
   margin-right: 10px;
 }
 
+#custom-separator {
+  color: #666666;
+}
+
 #pulseaudio:hover,
 #network:hover,
 #battery:hover,
