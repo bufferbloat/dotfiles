@@ -7,6 +7,7 @@
 window#waybar {
   background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
+  border-bottom: 1px solid #444444;
 }
 
 #workspaces {
@@ -28,6 +29,7 @@ window#waybar {
 
 #workspaces button.active {
   color: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 #workspaces button.active.persistent {
@@ -70,11 +72,17 @@ tooltip label {
   color: #666666;
 }
 
+#custom-vps {
+  padding: 0 10px;
+  color: #ffffff;
+}
+
 #pulseaudio:hover,
 #network:hover,
 #battery:hover,
 #custom-notifications:hover,
 #custom-tailscale:hover,
+#custom-vps:hover,
 #custom-power:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }

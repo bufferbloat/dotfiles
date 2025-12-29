@@ -5,7 +5,7 @@
   "spacing": 0,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/tailscale", "custom/separator", "pulseaudio", "network", "battery", "custom/notifications", "custom/separator", "custom/power"],
+  "modules-right": ["custom/tailscale", "custom/vps", "custom/separator", "pulseaudio", "network", "battery", "custom/notifications", "custom/separator", "custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -84,7 +84,7 @@
     "on-click": "~/.config/waybar/scripts/waybar-tailscale/waybar-tailscale.sh --toggle",
     "on-click-right": "~/.config/waybar/scripts/waybar-tailscale/waybar-tailscale.sh --select-exit-node",
     "exec-on-event": true,
-    "format": "VPN: {icon}",
+    "format": "vpn: {icon}",
     "format-icons": {
       "connected": "on",
       "stopped": "off"
@@ -102,6 +102,13 @@
 
   "custom/separator": {
     "format": " 〡",
+    "tooltip": false
+  },
+
+  "custom/vps": {
+    "exec": "~/.config/waybar/scripts/vps-status.sh",
+    "return-type": "plain",
+    "interval": 600,
     "tooltip": false
   }
 }
