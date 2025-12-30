@@ -64,8 +64,83 @@ tooltip label {
   color: #ffffff;
 }
 
+#group-power > *,
+#group-volume > * {
+  color: #ffffff;
+}
+
 #custom-power {
   margin-right: 10px;
+}
+
+/* Power Drawer Group */
+#group-power {
+  margin-right: 10px;
+}
+
+/* Volume Drawer Group */
+#group-volume {
+  margin-right: 0;
+}
+
+#pulseaudio {
+  min-width: 60px;
+}
+
+#group-volume .volume-drawer {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#group-volume:hover .volume-drawer {
+  opacity: 1;
+}
+
+/* Volume Slider */
+#pulseaudio-slider {
+  border: none;
+  outline: none;
+}
+
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+#pulseaudio-slider trough {
+  min-height: 8px;
+  min-width: 80px;
+  border-radius: 8px;
+  background-color: #000000;
+  border: 1px solid #666666;
+  outline: none;
+}
+
+#pulseaudio-slider highlight {
+  min-height: 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+#custom-power-logout,
+#custom-power-reboot {
+  padding: 0 10px;
+}
+
+#group-power .power-drawer {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#group-power:hover .power-drawer {
+  opacity: 1;
 }
 
 #custom-separator {
@@ -83,6 +158,10 @@ tooltip label {
 #custom-notifications:hover,
 #custom-tailscale:hover,
 #custom-vps:hover,
-#custom-power:hover {
+#custom-power:hover,
+#custom-power-logout:hover,
+#custom-power-reboot:hover,
+#group-power:hover,
+#group-volume:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }

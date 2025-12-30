@@ -5,7 +5,7 @@
   "spacing": 0,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/tailscale", "custom/vps", "custom/separator", "pulseaudio", "network", "battery", "custom/notifications", "custom/separator", "custom/power"],
+  "modules-right": ["custom/tailscale", "custom/vps", "custom/separator", "group/volume", "battery", "network", "custom/notifications", "custom/separator", "group/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -44,13 +44,33 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{volume}% {icon}",
     "format-muted": "󰖁",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"]
     },
     "on-click": "pavucontrol",
     "tooltip": false
+  },
+
+  "group/volume": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 250,
+      "transition-left-to-right": false,
+      "children-class": "volume-drawer",
+      "hover-open": true
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
   },
 
   "network": {
@@ -67,9 +87,9 @@
 
   "battery": {
     "interval": 1,
-    "format": "{icon} {capacity}%",
+    "format": "{capacity}% {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "format-charging": "󰂄 {capacity}%",
+    "format-charging": "{capacity}% 󰂄",
     "tooltip": false
   },
 
@@ -94,9 +114,36 @@
     "interval": 3
   },
 
+  "group/power": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false,
+      "children-class": "power-drawer",
+      "hover-open": true
+    },
+    "modules": [
+      "custom/power",
+      "custom/power-logout",
+      "custom/power-reboot"
+    ]
+  },
+
   "custom/power": {
     "format": "⏻",
-    "on-click": "~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false,
+    "on-click": "systemctl poweroff"
+  },
+
+  "custom/power-reboot": {
+    "format": "󰑓",
+    "on-click": "systemctl reboot",
+    "tooltip": false
+  },
+
+  "custom/power-logout": {
+    "format": "󰍃",
+    "on-click": "hyprctl dispatch exit",
     "tooltip": false
   },
 

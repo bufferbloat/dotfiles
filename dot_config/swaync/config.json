@@ -1,6 +1,6 @@
 {
   "positionX": "right",
-  "positionY": "top",
+  "positionY": "bottom",
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
@@ -26,6 +26,7 @@
   "hide-on-clear": true,
   "hide-on-action": true,
   "script-fail-notify": false,
+  "cssPriority": "user",
 
   "transition-time": 120
 }
