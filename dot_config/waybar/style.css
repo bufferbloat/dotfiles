@@ -70,13 +70,17 @@ tooltip label {
   padding: 8px;
 }
 
-#pulseaudio,
 #network,
 #battery,
 #custom-notifications,
 #custom-tailscale,
 #custom-power {
   padding: 0 10px;
+  color: #ffffff;
+}
+
+#pulseaudio {
+  padding: 0 6px;
   color: #ffffff;
 }
 

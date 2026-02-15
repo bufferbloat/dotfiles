@@ -156,6 +156,7 @@
     "exec": "~/.config/waybar/scripts/vps-status.sh",
     "return-type": "plain",
     "interval": 600,
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "waybar-msg module custom/vps hook 0"
   }
 }
