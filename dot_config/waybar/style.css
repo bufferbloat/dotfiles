@@ -17,10 +17,17 @@ window#waybar {
 #workspaces button {
   padding: 0 8px;
   background-color: transparent;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 0% 1px;
   color: #666666;
   border: none;
   border-radius: 0;
-  transition: all 0.3s ease-in-out;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 #workspaces button.persistent {
@@ -29,7 +36,7 @@ window#waybar {
 
 #workspaces button.active {
   color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  background-size: 100% 1px;
 }
 
 #workspaces button.active.persistent {
@@ -37,6 +44,10 @@ window#waybar {
 }
 
 #workspaces button:hover {
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: #ffffff;
   text-shadow:
     0 0 4px rgba(255, 255, 255, 0.7),
     0 0 9px rgba(255, 255, 255, 0.5);
@@ -44,7 +55,10 @@ window#waybar {
 }
 
 #workspaces button {
-  transition: text-shadow 0.3s ease;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 #clock {
@@ -170,6 +184,18 @@ tooltip label {
 #custom-vps {
   padding: 0 10px;
   color: #ffffff;
+}
+
+#custom-vps.up {
+  color: #a6e3a1;
+}
+
+#custom-vps.down {
+  color: #f38ba8;
+}
+
+#custom-vps.error {
+  color: #f9e2af;
 }
 
 #pulseaudio,

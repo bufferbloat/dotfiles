@@ -7,7 +7,7 @@ OPTIONS[reboot]="󰑓 Reboot"
 OPTIONS[logout]="󰍃 Logout"
 
 # Show menu using wofi (top right, compact, no search)
-selected=$(printf "%s\n" "${OPTIONS[@]}" | wofi --dmenu --prompt "" --insensitive --location 3 --width 110 --height 80 --cache-file=/dev/null --hide-search)
+selected=$(printf "%s\n" "${OPTIONS[@]}" | wofi --dmenu --normal-window --prompt "" --insensitive --location 3 --width 110 --height 80 --cache-file=/dev/null --hide-search)
 
 # Execute action
 case "$selected" in
